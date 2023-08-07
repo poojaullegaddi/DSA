@@ -1,23 +1,31 @@
-/* reverse of a number*/
+/* reverse the array */
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
 
+
 int main()
 {
-	int n,d;
-	int ct=0;
-	int rev=0;
-	cout<<"enter the number "<<endl;
-	cin>>n;
-	while(n>0)
+	int a[20],n,i;
+	cout<<"enter the size of the array" <<endl;
+	cin>> n;
+	cout<<"enter the array elements "<<endl;
+	for(i=0;i<n;i++)
 	{
-		 d = n%10;
-		ct++;
-		n=n/10;
-		rev= (rev*10)+d;
+		cin>>a[i];
 	}
-	cout<<"no of digits "<<ct<<endl;
-	cout<<"reverse of a number "<<rev;
+	cout<<"the array elements are "<<endl;
+	for(i=0;i<n;i++)
+	{
+		cout<<a[i]<<endl;
+	}
+	cout<<"after reversing array elements are "<<endl;
+	for(int i=n-1;i>=0;i--)
+	{
+		cout<<a[i]<<endl;
+	}
+	
 	return 0;
 }
+
+	
